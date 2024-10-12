@@ -82,9 +82,9 @@ case $choice in
         } > "$WORK"/proxy.txt
         
         # 봇 구동
-        python vooi-proxy.py
+        python3 vooi-proxy.py
     else
-        python vooi.py
+        python3 vooi.py
     fi
     ;;
 
@@ -96,9 +96,9 @@ case $choice in
     read -p "프록시를 사용하시겠습니까? (y/n): " use_proxy
     
     if [[ "$use_proxy" == "y" || "$use_proxy" == "Y" ]]; then
-        python vooi-proxy.py
+        python3 vooi-proxy.py
     else
-        python vooi.py
+        python3 vooi.py
     fi
     ;;
 
