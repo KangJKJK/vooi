@@ -68,6 +68,7 @@ case $choice in
     
     if [[ "$use_proxy" == "y" || "$use_proxy" == "Y" ]]; then
        
+        cd "$WORK"
         # 프록시 정보 입력 안내
         echo -e "${YELLOW}프록시 정보를 입력하세요. 입력형식: http://user:pass@ip:port${NC}"
         echo -e "${YELLOW}여러 개의 프록시는 줄바꿈으로 구분하세요.${NC}"
@@ -84,20 +85,22 @@ case $choice in
         # 봇 구동
         python3 vooi-proxy.py
     else
+        cd "$WORK"
         python3 vooi.py
     fi
     ;;
 
   2)
     echo -e "${GREEN}Vooi 봇을 재실행합니다.${NC}"
-    cd "$WORK"
     
     # 사용자에게 프록시 사용 여부를 물어봅니다.
     read -p "프록시를 사용하시겠습니까? (y/n): " use_proxy
     
     if [[ "$use_proxy" == "y" || "$use_proxy" == "Y" ]]; then
+        cd "$WORK"
         python3 vooi-proxy.py
     else
+        cd "$WORK"
         python3 vooi.py
     fi
     ;;
