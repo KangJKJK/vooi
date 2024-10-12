@@ -38,7 +38,6 @@ case $choice in
     # 환경변수 설정
     WORK="/root/VOOI-Telegram-Bot-backed-by-Binance"
 
-
     # 작업 공간 생성 및 이동
     echo -e "${YELLOW}작업 공간 이동 중...${NC}"
     cd "$WORK"
