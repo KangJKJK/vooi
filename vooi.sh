@@ -48,11 +48,11 @@ case $choice in
     sudo apt install python3-pip
     pip install -r requirements.txt
 
-    echo -e "${GREEN}다계정을 구동하기 위해선 각 query_id마다 같은 개수의 프록시가 필요합니다.${NC}"
-    echo -e "${GREEN}query_id를 얻는 방법은 텔레그램 그룹방을 참고하세요.하나의 텔레그렘 계정에서 쿼리ID는 동일합니다.${NC}"
-    echo -e "${GREEN}여러 개의 query_id를 입력할 경우 줄바꿈으로 구분하세요.${NC}"
+    echo -e "${YELLOW}Web텔레그렘에 접속후 F12를 누르시고 게임을 실행하세요${NC}"
+    read -p "애플리케이션-세션저장소-Birds와 관련된 URL클릭 후 나오는 UserID나 QueryID를 적어두세요 (엔터) : "
+    echo -e "${GREEN}다계정의 query_id를 입력할 경우 줄바꿈으로 구분하세요.${NC}"
     echo -e "${GREEN}입력을 마치려면 엔터를 두 번 누르세요.${NC}"
-    echo -e "${YELLOW}query_id를 입력하세요:${NC}"
+    echo -e "${YELLOW}Userid를 입력하세요(user= 또는 query_id= 포함해서 입력):${NC}"
 
     # data.txt 파일 생성 및 초기화
     {
